@@ -8,11 +8,6 @@ import {Hobby} from "./hobby";
 
 
 export class Personnage {
-    private _liens: Array<Lien> | undefined;
-    private _signesdistinctifs: Array<SigneDistinctif> | undefined;
-    private _parcours: Array<Parcours> | undefined;
-    private _hobbies: Array<Hobby> | undefined;
-
     constructor(id: number | null, nom: string, prenom: string, ddNAD: Date, sexe: Sexe, taille: number,
                 poids: number, couleurCheveux: string, couleurYeux: string, ddNIC: ICDate, lieuNaissance: Lieu) {
         this._id = id;
@@ -26,6 +21,46 @@ export class Personnage {
         this._couleurYeux = couleurYeux;
         this._ddNIC = ddNIC;
         this._lieuNaissance = lieuNaissance;
+    }
+
+    private _liens: Array<Lien> | undefined;
+
+    get liens(): Array<Lien> | undefined {
+        return this._liens;
+    }
+
+    set liens(value: Array<Lien> | undefined) {
+        this._liens = value;
+    }
+
+    private _signesdistinctifs: Array<SigneDistinctif> | undefined;
+
+    get signesdistinctifs(): Array<SigneDistinctif> | undefined {
+        return this._signesdistinctifs;
+    }
+
+    set signesdistinctifs(value: Array<SigneDistinctif> | undefined) {
+        this._signesdistinctifs = value;
+    }
+
+    private _parcours: Array<Parcours> | undefined;
+
+    get parcours(): Array<Parcours> | undefined {
+        return this._parcours;
+    }
+
+    set parcours(value: Array<Parcours> | undefined) {
+        this._parcours = value;
+    }
+
+    private _hobbies: Array<Hobby> | undefined;
+
+    get hobbies(): Array<Hobby> | undefined {
+        return this._hobbies;
+    }
+
+    set hobbies(value: Array<Hobby> | undefined) {
+        this._hobbies = value;
     }
 
     private _id: number | null;
@@ -226,38 +261,5 @@ export class Personnage {
 
     set lieuHabitation(value: Lieu | undefined) {
         this._lieuHabitation = value;
-    }
-
-
-    get liens(): Array<Lien> | undefined {
-        return this._liens;
-    }
-
-    set liens(value: Array<Lien> | undefined) {
-        this._liens = value;
-    }
-
-    get signesdistinctifs(): Array<SigneDistinctif> | undefined {
-        return this._signesdistinctifs;
-    }
-
-    set signesdistinctifs(value: Array<SigneDistinctif> | undefined) {
-        this._signesdistinctifs = value;
-    }
-
-    get parcours(): Array<Parcours> | undefined {
-        return this._parcours;
-    }
-
-    set parcours(value: Array<Parcours> | undefined) {
-        this._parcours = value;
-    }
-
-    get hobbies(): Array<Hobby> | undefined {
-        return this._hobbies;
-    }
-
-    set hobbies(value: Array<Hobby> | undefined) {
-        this._hobbies = value;
     }
 }
