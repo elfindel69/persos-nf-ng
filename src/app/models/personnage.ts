@@ -227,4 +227,37 @@ export class Personnage {
     set lieuHabitation(value: Lieu | undefined) {
         this._lieuHabitation = value;
     }
+
+
+    get liens(): Array<Lien> | undefined {
+        return this._liens;
+    }
+
+    set liens(value: Array<Lien> | undefined) {
+        this._liens = value;
+    }
+
+    get signesdistinctifs(): Array<SigneDistinctif> | undefined {
+        return this._signesdistinctifs;
+    }
+
+    set signesdistinctifs(value: Array<SigneDistinctif> | undefined) {
+        this._signesdistinctifs = value;
+    }
+
+    get parcours(): Array<Parcours> | undefined {
+        return this._parcours;
+    }
+
+    set parcours(value: Array<Parcours> | undefined) {
+        this._parcours = value;
+    }
+
+    get hobbies(): Array<Hobby> | undefined {
+        return this._hobbies;
+    }
+
+    set hobbies(value: Array<Hobby> | undefined) {
+        this._hobbies = value;
+    }
 }
